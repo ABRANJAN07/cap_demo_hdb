@@ -18,13 +18,24 @@
   "cds": {
     "requires": {
       "db": {
-        "kind": "hana-cloud"
+        "kind": "sql"
       },
       "auth": {
         "kind": "xsuaa"
       },
       "approuter": {
         "kind": "cloudfoundry"
+      },
+      "[production]": {
+        "db": {
+          "kind": "hana-cloud"
+        },
+        "auth": {
+          "kind": "xsuaa"
+        },
+        "approuter": {
+          "kind": "cloudfoundry"
+        }
       }
     },
     "build": {

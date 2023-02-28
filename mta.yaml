@@ -31,7 +31,9 @@ modules:
     parameters:
       buildpack: nodejs_buildpack
     build-parameters:
-      ignore: ["default-env.json", ".env1"]
+      ignore:
+        - "default-env.json"
+        - ".env1"
     requires:
       - name: cap_demo_hdb-db
 
